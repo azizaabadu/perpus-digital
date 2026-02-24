@@ -35,7 +35,7 @@ if(!isset($_SESSION['user'])) {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -65,8 +65,7 @@ if(!isset($_SESSION['user'])) {
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="?page=peminjaman" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="index.php?page=peminjaman" >
                     <i class="fas fa-solid fa-book-open"></i>
                     <span>Peminjaman</span>
                 </a>
@@ -74,8 +73,7 @@ if(!isset($_SESSION['user'])) {
 
             <?php if($_SESSION['user']['level'] == 'admin') : ?>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="?page=kategori" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="index.php?page=kategori" >
                     <i class="fas fa-solid fa-layer-group"></i>
                     <span>Kategori</span>
                 </a>
@@ -116,7 +114,7 @@ if(!isset($_SESSION['user'])) {
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-dark bg-dark topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -322,12 +320,6 @@ if(!isset($_SESSION['user'])) {
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
 
                     <!-- Content Row -->
                     <div class="row">
