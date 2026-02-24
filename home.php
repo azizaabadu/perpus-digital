@@ -1,6 +1,6 @@
 <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card  border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -92,3 +92,25 @@
                                 </div>
                             </div>
                         </div>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tr>
+                <td width="150"><strong>Nama</strong></td>
+                <td width="1">:</td>
+                <td width="200"><?php echo $_SESSION['user']['nama']; ?></td>
+            </tr>
+            <tr>
+                <td width="150"><strong>Level User</strong></td>
+                <td width="1">:</td>
+                <td width="200"><?php echo $_SESSION['user']['level']; ?></td>
+            </tr>
+            <tr>
+                <td width="150"><strong>Tanggal Login</strong></td>
+                <td width="1">:</td>
+                <td width="200"><?= date('d-m-Y') ?></td>
+            </tr>
+        </table>
+    </div>
+</div>
