@@ -7,6 +7,10 @@
             <form action="" method="POST">
                 <?php
                    $id = $_GET['id'];
+
+                   $query = mysqli_query($koneksi, "SELECT * FROM kategori WHERE id_kategori='$id'");
+                   $data = mysqli_fetch_array($query);
+
                    if(isset($_POST['submit'])) {
                     $kategori = strtolower($_POST['kategori']);
                     $cek = mysqli_query($koneksi, "SELECT * FROM kategori WHERE  LOWER(kategori)='$kategori'");
@@ -25,7 +29,7 @@
                 ?>
                 <div class="mb-3">
                     <label for="namaKategori" class="form-label">Nama Kategori</label>
-                    <input type="text" class="form-control"  name="kategori" placeholder="Masukan Nama Kategori"  required>
+                    <input type="text" class="form-control"  name="kategori" value=<?php echo $data['kategori']; ?> required>
                 </div>
 
                 <!-- button Area -->

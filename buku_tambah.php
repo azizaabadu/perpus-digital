@@ -1,20 +1,20 @@
 <div class="container mt-5">
     <div class="card shadow">
         <div class="card-header bg-primary text-white">
-            <h5 class="card-title mb-0">Tambah Kategori Baru</h5>
+            <h5 class="card-title mb-0">Tambah Buku</h5>
         </div>
         <div class="card-body">
             <form action="" method="POST">
                 <?php
                     if(isset($_POST['submit'])){
-                        $kategori = strtolower($_POST['kategori']);
-                        //menegcek data kategori
-                        $cek = mysqli_query($koneksi, "SELECT * FROM kategori WHERE  LOWER(kategori)='$kategori'");
+                        $buku = strtolower($_POST['buku']);
+                        
+                        $cek = mysqli_query($koneksi, "SELECT * FROM buku WHERE  LOWER(buku)='$buku'");
                         $check = mysqli_num_rows($cek);
                         if($check >  0) {
                             echo "Data yang dimasukan sama";
                         } else {
-                            $query = mysqli_query($koneksi, "INSERT INTO kategori(kategori) VALUES ('$kategori')");
+                            $query = mysqli_query($koneksi, "INSERT INTO buku(judul, kategori, gambar, penulis, penerbit, tahun_terbit, isbn, jumlah, sinposis) VALUES ('$kategori')");
                             if($query) {
                                 echo '<script>alert("Tambah data berhasil");</script>';
                             } else {

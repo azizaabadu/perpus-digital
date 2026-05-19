@@ -42,7 +42,10 @@ if(!isset($_SESSION['user'])) {
                 <div class="sidebar-brand-icon rotate-n-">
                     <i class="fas fa-solid fa-school"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">PERPUS DIGITAL</div>
+                <div class="sidebar-brand-text mx-3">PERPUS DIGITAL
+                    <br>
+                   <small>Welcome <?= $_SESSION['user']['nama']; ?></small>
+                </div>
             </a>
 
             <!-- Divider -->
@@ -81,8 +84,7 @@ if(!isset($_SESSION['user'])) {
             <?php endif; ?>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="?page=buku" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="index.php?page=buku">
                     <i class="fas fa-solid fa-book"></i>
                     <span>Buku</span>
                 </a>
